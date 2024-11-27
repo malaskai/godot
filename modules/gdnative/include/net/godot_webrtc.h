@@ -104,6 +104,7 @@ typedef struct {
 
 	godot_error (*poll)(void *);
 	void (*close)(void *);
+	void (*clear_buffer)(void *);
 
 	void *next; /* For extension? */
 } godot_net_webrtc_data_channel;

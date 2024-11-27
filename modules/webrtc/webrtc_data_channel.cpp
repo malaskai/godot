@@ -34,6 +34,7 @@
 void WebRTCDataChannel::_bind_methods() {
 	ClassDB::bind_method(D_METHOD("poll"), &WebRTCDataChannel::poll);
 	ClassDB::bind_method(D_METHOD("close"), &WebRTCDataChannel::close);
+	ClassDB::bind_method(D_METHOD("clear_buffer"), &WebRTCDataChannel::clear_buffer);
 
 	ClassDB::bind_method(D_METHOD("was_string_packet"), &WebRTCDataChannel::was_string_packet);
 	ClassDB::bind_method(D_METHOD("set_write_mode", "write_mode"), &WebRTCDataChannel::set_write_mode);

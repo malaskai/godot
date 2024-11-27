@@ -89,6 +89,13 @@ void WebRTCDataChannelJS::close() {
 	godot_js_rtc_datachannel_close(_js_id);
 }
 
+void WebRTCDataChannelJS::clear_buffer() {
+	in_buffer.resize(0);
+	queue_count = 0;
+	_was_string = false;
+	in_buffer.resize(_in_buffer_shift);
+}
+
 Error WebRTCDataChannelJS::poll() {
 	return OK;
 }

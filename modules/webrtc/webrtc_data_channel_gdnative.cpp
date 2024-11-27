@@ -55,6 +55,11 @@ void WebRTCDataChannelGDNative::close() {
 	interface->close(interface->data);
 }
 
+void WebRTCDataChannelGDNative::clear_buffer() {
+	ERR_FAIL_COND(interface == nullptr);
+	interface->clear_buffer(interface->data);
+}
+
 void WebRTCDataChannelGDNative::set_write_mode(WriteMode p_mode) {
 	ERR_FAIL_COND(interface == nullptr);
 	interface->set_write_mode(interface->data, p_mode);

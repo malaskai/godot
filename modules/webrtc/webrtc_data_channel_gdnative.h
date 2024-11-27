@@ -65,6 +65,8 @@ public:
 	virtual Error poll();
 	virtual void close();
 
+	virtual void clear_buffer();
+
 	/** Inherited from PacketPeer: **/
 	virtual int get_available_packet_count() const;
 	virtual Error get_packet(const uint8_t **r_buffer, int &r_buffer_size); ///< buffer is GONE after next get_packet
